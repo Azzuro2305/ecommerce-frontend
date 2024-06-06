@@ -1,0 +1,94 @@
+.feedback {
+    border: 1px solid $pure-black;
+    padding: 30px 40px;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    position: relative;
+
+    &__upper {
+        height: 70%;
+
+        p {
+            height: 90%;
+            overflow-y: auto;
+            line-height: 1.5;
+            scrollbar-color: transparent transparent;
+
+            &:hover {
+                scrollbar-color: $light-gray transparent;
+                transition: 0.3s all;
+            }
+        }
+    }
+
+  &__lower {
+    @include addFlex(row, start, center, 0);
+    width: 100%;
+    border-top: 1px solid $pure-black;
+    padding-top: 10px;
+    
+    .profile {
+        background-color: $light-gray;
+        border-radius: 45px;
+        padding: 30px;
+    }
+
+    &__user-info {
+        h2 {
+            text-align: left;
+            text-indent: 10px;
+            padding-top: 10px;
+        }
+      &__star-rating {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+
+        input[type="radio"] {
+          display: none;
+        }
+
+        label {
+          color: gray;
+          padding: 10px;
+          font-size: 2em;
+          transition: color 0.2s;
+        }
+
+        input[type="radio"]:checked ~ label,
+        label:hover,
+        label:hover ~ label {
+          color: gold;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+.feedback__lower__user-info__star-rating {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .feedback__lower__user-info__star-rating input[type="radio"] {
+    display: none;
+  }
+  
+  .feedback__lower__user-info__star-rating label {
+    color: gray;
+    padding: 10px;
+    font-size: 2em;
+    transition: color 0.2s;
+  }
+  
+  .feedback__lower__user-info__star-rating input[type="radio"]:checked ~ label,
+  .feedback__lower__user-info__star-rating label:hover,
+  .feedback__lower__user-info__star-rating label:hover ~ label {
+    color: gold;
+  }

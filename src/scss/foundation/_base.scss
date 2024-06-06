@@ -1,0 +1,38 @@
+@import './setting';
+
+body {
+    background-color: white;
+}
+
+.scroll-to-top-btn {
+    button {
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.animated-title {
+    @include addFont($primary-font, $font-size-30px, $primary-font-weight, $primary-color);
+    background: linear-gradient(to right, $medium-black, $gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding: 50px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.2rem;
+    animation: typing 10s steps(300, end) infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}

@@ -1,0 +1,26 @@
+.home {
+    // height: 1000px;
+    overflow-x: hidden;
+    font-family: $primary-font;
+
+    &__intro {
+        display: flex;
+        @include addFlex(row, space-around, center, 4);
+        width: 100%;
+    }
+
+    &__exclusive-products {
+        @include addFlex(row, space-around, center, 4);
+        flex-wrap: wrap;
+        row-gap: 50px;
+        margin: auto;
+        width: $inner-width;
+    }
+
+    &__feedbacks {
+      @include addFlex(row, space-between, center, 4);
+      width: $inner-width;
+      margin: auto;
+    }
+}
+

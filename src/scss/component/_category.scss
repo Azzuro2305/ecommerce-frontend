@@ -1,0 +1,41 @@
+.category {
+  font-family: $primary-font;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  img {
+    width:350px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  h2 {
+    @include addFont(
+      $primary-font,
+      $secondary-font-size,
+      $primary-font-weight,
+      $gold
+    );
+
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    color: $gold;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, black, transparent, black);
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+footer {
+    // position: fixed;
+    // bottom: 0;
+    font-family: $primary-font;
+    bottom: 0;
+    padding: 60px 100px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+    color: #373737;
+
+    h2 {
+        @include addFont($primary-font, $tertiary-font-size, $primary-font-weight, $primary-color);
+        padding-bottom: 20px;
+    }
+
+    p, a {
+        font-size: 12px;
+        font-weight: 200;
+    }
+
+    .upper {
+        @include addFlex(row, space-between, start, 4);
+        &__logo {
+            img {
+                width: 150px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #373737;
+
+            &:hover {
+                color: #BB9B61;
+            }
+        }
+
+        &__contact {
+            @include addFlex(column, center, start, 12);
+            
+            img {
+                width: 20px;
+            }
+
+            div {
+                @include addFlex(row, flex-start, center, 10);
+
+                p {
+                    width: 200px;
+                }
+            }
+        }
+
+        &__help-center {
+            @include addFlex(column, center, start, 12);
+        }
+
+        &__followus {
+            &__links {
+                @include addFlex(row, center, center, 12);
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .lower {
+        @include addFlex(row, space-between, center, 4);
+        padding-top: 40px;
+
+        &__info {
+            width: 50%;
+        }
+
+        form {
+            .user-email {
+                @include addFlex(row, space-between, center, 12);
+                border-bottom: 1px solid #999999;
+                padding-bottom: 10px;
+            }
+
+            .user-agreement {
+                @include addFlex(row, start, center, 4);
+                padding-top: 10px;
+                label {
+                    @include addFont($primary-font, 12px, $secondary-font-weight, $primary-color);
+                }
+            }
+            input {
+                border: none;
+                background-color: transparent;
+                color: #BB9B61;
+
+                &[type="email"]:focus {
+                    outline: none;
+                }
+
+                &[type="submit"]:hover {
+                    color: #373737;
+                    transition: all 0.5s;
+                }
+            }
+
+            
+
+            button {
+
+            }
+        }
+    }
+}

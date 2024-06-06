@@ -1,0 +1,26 @@
+.service {
+    @include addFlex(row, space-between, center, 4);
+    font-family: $primary-font;
+    width: $inner-width;
+    margin: auto;
+    padding: 70px 0px;
+
+    &__type {
+        @include addFlex(row, center, center, 20);
+
+        h2 {
+            font-weight: 900;
+            color: $medium-gray;
+        }
+
+        p {
+            font-size: 14px;
+            color: $light-gray
+        }
+
+        &__description {
+            @include addFlex(column, center, start, 8);
+        }
+
+    }
+}

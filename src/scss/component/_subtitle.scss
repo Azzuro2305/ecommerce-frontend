@@ -1,0 +1,28 @@
+.subtitle {
+    background-color: $gold;
+    font-family: $primary-font;
+    color: $light;
+    padding: 20px 0px;
+    margin-bottom: 50px;
+
+    h1 {
+        width: $inner-width;
+        margin: auto;
+        @include addFont($primary-font, $font-size-30px, $secondary-font-weight, $light);
+    }
+
+    &__current-page {
+        @include addFlex(row, start, center, 0);
+        padding-top: 30px;
+        width: $inner-width;
+        margin: auto;
+        font-size: 12px;
+
+        img {
+            width: 15px;
+        }
+        span {
+            padding: 0px 14px;
+        }
+    }
+}

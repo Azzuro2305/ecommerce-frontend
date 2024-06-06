@@ -1,0 +1,45 @@
+// Variables
+$primary-font: 'Roboto', 'sans-serif', 'Lato';
+$primary-font-size: 40px;
+$primary-font-weight: 900;
+$primary-color: #2f3132;
+
+
+$secondary-font-size: 20px;
+$secondary-font-weight: 700;
+$secondary-color: #6a6b6c;
+
+
+$font-size-30px: 30px;
+
+
+$tertiary-font-size: 16px;
+$tertiary-color: #6a6b6c;
+// Functions
+@mixin addFlex($direction, $justify, $align, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: #{$gap}px;
+}
+
+@mixin addFont($font, $size, $weight, $color) {
+    font-family: $primary-font;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+
+// Color
+$gold: #BB9B61;
+$light-gray: #999999;
+$medium-gray: #555555;
+$pure-black: #000;
+$strong-black: #222222;
+$medium-black: #2f3132;
+$light: #fff;
+
+// Dimensions
+$inner-width: 1200px;

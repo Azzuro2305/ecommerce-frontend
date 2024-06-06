@@ -1,0 +1,23 @@
+.intro {
+    width: 48%;
+    height: 800px;
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        &:hover{
+            opacity: 0.5;
+            transition: all 0.5s;
+        }
+    }
+
+    h2 {
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        @include addFont($primary-font, $secondary-font-size, $primary-font-weight, #fff);
+    }
+}

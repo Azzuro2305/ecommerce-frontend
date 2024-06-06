@@ -1,0 +1,92 @@
+.checkout-header {
+    @include addFlex(row, space-between, center, 20);
+    width: $inner-width;
+    margin: auto;
+    font-family: $primary-font;
+
+    &__logo {
+        width: 100px;
+    }
+
+    &__icon {
+        width: 20px;
+    }
+}
+
+hr {
+    border: 0.1px solid #d2d2d2;
+    margin: 0;
+}
+
+.checkout-body {
+    // width: $inner-width;
+    margin: auto;
+    font-family: $primary-font;
+
+    input {
+        border: 1px solid #DEDEDE;
+        height: 40px;
+    }
+
+    &__payment {
+        @include addFlex(row, space-between, start, 0);
+
+            &__inner {
+                width: 50%;
+
+                form {
+                    width: 600px;
+                    float: right;
+                    padding-top: 20px;
+                    padding-right: 20px;
+
+                    .contact-label {
+                        @include addFlex(row, space-between, center, 0);
+                        margin-bottom: 20px;
+
+                        label {
+                            font-weight: 900;
+                            font-size: $secondary-font-size;
+                        }
+
+                        a {
+                            color: $pure-black;
+                        }
+                    }
+
+                    .contact-info {
+                        width: 100%;
+
+                        &:focus {
+                            border: 1px solid $gold;
+                        }
+                    }
+
+                    .contact-checkbox {
+                        span {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .delivery {
+                        select {
+                            width: 100%;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+            
+        &__items {
+            width: 50%;
+            height: 800px;
+            background-color: #FAFAFA;
+
+            &__inner {
+                width: 600px;
+                padding-top: 20px;
+                padding-left: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.shopping-cart {
+    width: $inner-width;
+    margin: auto;
+    font-family: $primary-font;
+
+    &__summary {
+        margin-bottom: 100px;
+
+        form {
+            .item-table {
+                width: 100%;
+                border: 1px solid #DDDDDD;
+                text-align: center;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+
+                td {
+                    padding: 20px;
+                    border: 1px solid #DDDDDD;
+                }
+
+                .table-title {
+                    background-color: #F7F7F7;
+                }
+            }
+        }
+
+        &__options {
+            @include addFlex(row, start, center, 20);
+            margin-bottom: 50px;
+
+            button {
+                background-color: $gold;
+                border-radius: 45px;
+                padding: 10px 20px;
+                border: none;
+                color: $light;
+
+                &:hover {
+                    background-color: $pure-black;
+                    transition: 0.3s all;
+                
+                }
+            }
+        }
+
+        &__net {
+            @include addFlex(row, space-between, start, 20);
+            &__instruction {
+                background-color: #F7F7F7;
+                padding: 20px;
+                width: 50%;
+
+                input[type="textarea"] {
+                    width: 100%;
+                    height: 100px;
+                    margin-top: 10px;
+                    border: 1px solid #EEEEEE;
+                    text-align: start;  // recheck this (minor issue)
+                }
+            }
+
+            &__total {
+                background-color: #F7F7F7;
+                padding: 20px;
+                width: 50%;
+
+                .price-table {
+                    width: 100%;
+                    border: 1px solid #DDDDDD;
+                    border-collapse: collapse;
+                    margin-top: 20px;
+    
+                    td {
+                        padding: 20px;
+                        border: 1px solid #DDDDDD;
+                    }
+    
+                    .table-title {
+                        background-color: #F7F7F7;
+                    }
+                }
+
+                input[type="submit"] {
+                    background-color: $gold;
+                    border-radius: 45px;
+                    padding: 10px 20px;
+                    margin-top: 20px;
+                    border: none;
+                    color: $light;
+                    width: 100%;
+    
+                    &:hover {
+                        background-color: $pure-black;
+                        transition: 0.3s all;
+                    
+                    }
+                }
+            }
+        }
+    }
+}

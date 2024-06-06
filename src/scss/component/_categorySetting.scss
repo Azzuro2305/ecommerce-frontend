@@ -1,0 +1,73 @@
+.category-setting {
+    // margin: start;
+    width: 250px;
+    font-family: $primary-font;
+    color: $medium-gray;
+
+    h2 {
+        @include addFont($primary-font, 20px, 700, $medium-black);
+    }
+
+    hr {
+        margin: 20px 0px;
+    }
+
+    &__availability {
+        &__title {
+            @include addFlex(row, space-between, center, 0);
+        }
+
+        &__instock {
+            margin: 20px 0px;
+
+            input {
+                margin-right: 10px;
+            }
+        }
+
+        &__out-of-stock {
+            margin: 20px 0px;
+
+            input {
+                margin-right: 10px;
+            }
+        }
+
+    }
+
+    &__price {
+
+
+        &__title {
+            @include addFlex(row, space-between, center, 0);
+            margin-top: 20px;
+        }
+
+        &__price-input {
+            @include addFlex(row, center, center, 30);
+    
+            span {
+                padding: 0px 4px;
+            }
+    
+            label {
+                @include addFlex(row, space-around, center, 0);
+            }
+    
+            input[type="number"] {
+                width: 56px;
+                height: 30px;
+            }
+        }
+    }
+
+    input[type="submit"] {
+        background-color: $gold;
+        color: $light;
+        margin-top: 20px;
+        padding: 14px 30px;
+        border-radius: 45px;
+        border: none;
+        
+    }
+}

@@ -1,0 +1,5 @@
+.best-seller {
+    @include addFlex(row, start, start, 20);
+    width: $inner-width;
+    margin: auto;
+}

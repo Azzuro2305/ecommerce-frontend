@@ -1,0 +1,17 @@
+.category-info {
+    @include addFlex(row, space-around, center, 20);
+    width: $inner-width;
+    // width: 100%;
+    margin: auto;
+    overflow-x: scroll;
+    // padding: 0px 50px;
+    scrollbar-color: transparent transparent;
+
+    &:hover {
+        scrollbar-color: $light-gray transparent;
+        transition: 0.3s all;
+    }
+}
+
+
+// #F5F5F5
